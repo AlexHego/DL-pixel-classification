@@ -46,10 +46,14 @@ III. Installation dependencies
 `pip install --upgrade git+https://github.com/True-North-Intelligent-Algorithms/napari-easy-augment-batch-dl.git`<br />
 `pip install notebook`<br />
 
+Next, create a folder on your computer, download the following scripts, and place them inside that folder. <br /> [vessels_semantic_framework.py](https://github.com/True-North-Intelligent-Algorithms/tnia-python/blob/main/notebooks/imagesc/2025_03_19_vessel_3D_lightsheet/vessels_semantic_framework.py)<br /> 
+
+
+
 IV. Extracting Images from CZI Files
 ------
 Make sure the conda environment is activated before launching Jupyter Notebook. If not start Miniconda prompt and write <br />`conda activate vessels_lightsheet`<br />
-
+then <br />    `conda activate vessels_lightsheet`<br />
 
 
 Citation
