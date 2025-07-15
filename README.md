@@ -14,8 +14,7 @@
   * [V. TrackMate](#v-trackmate)
   * [VI. TrackMate Batcher](#vi-trackmate-batcher)
   * [Citation](#citation)
-     + [Citation Cellpose](#citation-cellpose)
-     + [Citation TrackMate](#citation-trackmate)
+
 
 Pixel Classification
 ------
