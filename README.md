@@ -64,6 +64,13 @@ V. Sparse annotations and training
 Results
 ------
 
+![2d slice](https://github.com/user-attachments/assets/fc3f62c7-0fcc-4c1b-bed9-8699b274eb02)
+
+
+
+https://github.com/user-attachments/assets/ab7476a2-06ab-4925-948e-ec738b5410e3
+
+
 
 Citation
 ------
