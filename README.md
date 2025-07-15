@@ -63,8 +63,7 @@ V. Sparse annotations and training
 
 Results
 ------
-<img src="https://us1.discourse-cdn.com/flex015/uploads/imagej/original/3X/b/b/bb27339a97fde4a77f7863b76ca8153062959d93.mp4">
-<img src="https://us1.discourse-cdn.com/flex015/uploads/imagej/original/3X/e/4/e4f239d7e859bc1e66e6373baeffdbf3a2d5a1d9.mp4">
+
 
 Citation
 ------
