@@ -6,6 +6,7 @@
   * [II. Create and activate a new environment](#ii-create-and-activate-a-new-environment)
   * [III. Installation dependencies](#iii-installation-dependencies)
   * [IV. Extracting Images from CZI Files](#iv-extracting-images-from-czi-files)
+  * [V. Sparse annotations and training](#v-sparse-annotations-and-training)
 * [Main GUI controls](#main-gui-controls)
 * [Citation](#citation)
 
@@ -51,12 +52,14 @@ III. Installation dependencies
 Next, create a folder on your computer, download the following scripts, and place them inside that folder. <br /> [vessels_semantic_framework.py](https://github.com/True-North-Intelligent-Algorithms/tnia-python/blob/main/notebooks/imagesc/2025_03_19_vessel_3D_lightsheet/vessels_semantic_framework.py)
 <br /> [Extract 2D images and crop script](https://github.com/AlexHego/DL-pixel-classification/blob/main/01_extract%202D%20images%20and%20crop.ipynb)
 <br /> [Training script](https://github.com/AlexHego/DL-pixel-classification/blob/main/02_Training_sparse_label.ipynb)
-<br /> [Training script](https://github.com/AlexHego/DL-pixel-classification/blob/main/02_Training_sparse_label.ipynb)
 
 IV. Extracting Images from CZI Files
 ------
-Before launching Jupyter Notebook, ensure that the conda environment is activated. If it isn’t, open the Miniconda Prompt and run: `conda activate vessels_lightsheet`. Once the environment is activated, start Jupyter Notebook by typing: `jupyter notebook`.
-Then, navigate to the folder where your scripts are saved.
+Before launching Jupyter Notebook, ensure that the conda environment is activated. If it isn’t, open the Miniconda Prompt and run: <br />  `conda activate vessels_lightsheet`. <br />  Once the environment is activated, start Jupyter Notebook by typing: `jupyter notebook`.
+<br /> Then, navigate to the folder where your scripts are saved and open the notebook titled "Extract 2D images and crop". Launch the script from there.
+
+V. Sparse annotations and training
+------
 
 
 Citation
