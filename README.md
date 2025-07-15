@@ -4,7 +4,8 @@
 * [Step-by-step tutorial](#step-by-step-tutorial)
   * [I. installation conda](#i-installation-conda)
   * [II. Create and activate a new environment](#ii-create-and-activate-a-new-environment)
-  * [III. Using the Cellpose GUI](#iii-using-the-cellpose-gui)
+  * [III. Installation dependencies](#iii-installation-dependencies)
+  * [IV. Extracting Images from CZI Files](#iv-extracting-images-from-czi-files)
 * [Main GUI controls](#main-gui-controls)
 * [Citation](#citation)
 
@@ -20,7 +21,7 @@ However, Random Forests have limitations, this motivates the shift toward **deep
 
 Goals
 ------
-This GitHub project demonstrates how to train a **2D U-Net** for semantic segmentation using only a few annotated ROIs across slices from a large 3D light sheet image. Labels are sparsely drawn in **Napari**, using the **napari-easy-augment-batch-dl** plugin, and augmented to increase data diversity. The trained model is then applied **slice-by-slice** across the full 3D volume using MONAI’s, and the results are visualized in Napari. While a 3D model might improve performance, this 2D approach balances accuracy and resource efficiency, making it accessible and scalable for large imaging datasets.
+This GitHub project demonstrates how to train a **2D U-Net** for semantic segmentation using only a few annotated ROIs across slices from a large 3D light sheet images (Lightsheet Z1 from Zeiss). Labels are sparsely drawn in **Napari**, using the **napari-easy-augment-batch-dl** plugin, and augmented to increase data diversity. The trained model is then applied **slice-by-slice** across the full 3D volume using MONAI’s, and the results are visualized in Napari. While a 3D model might improve performance, this 2D approach balances accuracy and resource efficiency, making it accessible and scalable for large imaging datasets.
 
 Step-by-step tutorial
 ------
@@ -33,9 +34,22 @@ During the installation, check the box "Add Anaconda/Miniconda to my PATH enviro
 
 II. Create and activate a new environment
 ------
-Start Miniconda prompt and write
-    'conda create -n vessels_lightsheet -c conda-forge python=3.11'
-    'conda activate vessels_lightsheet'
+Start Miniconda prompt and write <br />   `conda create -n vessels_lightsheet -c conda-forge python=3.11` <br /> then <br />    `conda activate vessels_lightsheet`<br />
+
+III. Installation dependencies
+------
+`pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124`<br />
+`pip install "napari[all]"`<br />
+`pip install albumentations matplotlib scipy tifffile czifile `<br />
+`pip install --upgrade git+https://github.com/Project-MONAI/MONAI `<br />
+`pip install --upgrade git+https://github.com/True-North-Intelligent-Algorithms/tnia-python.git`<br />
+`pip install --upgrade git+https://github.com/True-North-Intelligent-Algorithms/napari-easy-augment-batch-dl.git`<br />
+`pip install notebook`<br />
+
+IV. Extracting Images from CZI Files
+------
+Make sure the conda environment is activated before launching Jupyter Notebook. If not start Miniconda prompt and write <br />`conda activate vessels_lightsheet`<br />
+
 
 
 Citation
