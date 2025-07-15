@@ -49,7 +49,7 @@ III. Installation dependencies
 `pip install notebook`<br />
 
 Next, create a folder on your computer, download the following scripts, and place them inside that folder. <br /> [vessels_semantic_framework.py](https://github.com/True-North-Intelligent-Algorithms/tnia-python/blob/main/notebooks/imagesc/2025_03_19_vessel_3D_lightsheet/vessels_semantic_framework.py)
-<br /> [Extract 2D images script](https://github.com/AlexHego/DL-pixel-classification/blob/main/extract%202D%20images.ipynb)
+<br /> [Extract 2D images and crop script](https://github.com/AlexHego/DL-pixel-classification/blob/main/01_extract%202D%20images%20and%20crop.ipynb)
 <br /> [Extract 2D images script](https://github.com/AlexHego/DL-pixel-classification/blob/main/extract%202D%20images.ipynb)
 
 
