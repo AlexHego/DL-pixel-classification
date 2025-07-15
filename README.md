@@ -51,12 +51,12 @@ III. Installation dependencies
 Next, create a folder on your computer, download the following scripts, and place them inside that folder. <br /> [vessels_semantic_framework.py](https://github.com/True-North-Intelligent-Algorithms/tnia-python/blob/main/notebooks/imagesc/2025_03_19_vessel_3D_lightsheet/vessels_semantic_framework.py)
 <br /> [Extract 2D images and crop script](https://github.com/AlexHego/DL-pixel-classification/blob/main/01_extract%202D%20images%20and%20crop.ipynb)
 <br /> [Training script](https://github.com/AlexHego/DL-pixel-classification/blob/main/02_Training_sparse_label.ipynb)
-
+<br /> [Training script](https://github.com/AlexHego/DL-pixel-classification/blob/main/02_Training_sparse_label.ipynb)
 
 IV. Extracting Images from CZI Files
 ------
-Make sure the conda environment is activated before launching Jupyter Notebook. If not start Miniconda prompt and write <br />`conda activate vessels_lightsheet`<br />
-When the environement is activate write `jupyter notebook`
+Before launching Jupyter Notebook, ensure that the conda environment is activated. If it isn’t, open the Miniconda Prompt and run: `conda activate vessels_lightsheet`. Once the environment is activated, start Jupyter Notebook by typing: `jupyter notebook`.
+Then, navigate to the folder where your scripts are saved.
 
 
 Citation
