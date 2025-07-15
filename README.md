@@ -1,19 +1,13 @@
 # DL-pixel-classification
-
-
-  * [Pixel Classification](#pixel-classification)
-  * [Goals](#goals)
-- [Step-by-step tutorial](#step-by-step-tutorial)
-  * [Presentation Link (Alexandre Hego CC BY-NC-SA)](#presentation-link--alexandre-hego-cc-by-nc-sa-)
-  * [I. installation Fiji and Cellpose](#i-installation-fiji-and-cellpose)
+* [Pixel Classification](#pixel-classification)
+* [Goals](#goals)
+* [Step-by-step tutorial](#step-by-step-tutorial)
+  * [I. Installation Fiji and Cellpose](#i-installation-fiji-and-cellpose)
   * [II. Starting Cellpose GUI on PC](#ii-starting-cellpose-gui-on-pc)
   * [III. Using the Cellpose GUI](#iii-using-the-cellpose-gui)
-     * [Main GUI controls](#main-gui-controls)
-  * [Segmentation options](#segmentation-options)
-  * [IV. Training your own cellpose model](#iv-training-your-own-cellpose-model)
-  * [V. TrackMate](#v-trackmate)
-  * [VI. TrackMate Batcher](#vi-trackmate-batcher)
-  * [Citation](#citation)
+* [Main GUI controls](#main-gui-controls)
+* [Citation](#citation)
+
 
 
 Pixel Classification
