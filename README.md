@@ -2,8 +2,8 @@
 * [Pixel Classification](#pixel-classification)
 * [Goals](#goals)
 * [Step-by-step tutorial](#step-by-step-tutorial)
-  * [I. Installation Fiji and Cellpose](#i-installation-fiji-and-cellpose)
-  * [II. Starting Cellpose GUI on PC](#ii-starting-cellpose-gui-on-pc)
+  * [I. installation conda](#i-installation-conda)
+  * [II. Create and activate a new environment](#ii-create-and-activate-a-new-environment)
   * [III. Using the Cellpose GUI](#iii-using-the-cellpose-gui)
 * [Main GUI controls](#main-gui-controls)
 * [Citation](#citation)
@@ -24,10 +24,18 @@ This GitHub project demonstrates how to train a **2D U-Net** for semantic segmen
 
 Step-by-step tutorial
 ------
+For windows
 
-I. installation Conda
+I. installation conda
 ------
 Install Miniconda [link](https://www.anaconda.com/download/success) and check the [documentation](https://www.anaconda.com/docs/main) for more informations.
+During the installation, check the box "Add Anaconda/Miniconda to my PATH environment variable".
+
+II. Create and activate a new environment
+------
+Start Miniconda prompt and write
+    'conda create -n vessels_lightsheet -c conda-forge python=3.11'
+    'conda activate vessels_lightsheet'
 
 
 Citation
