@@ -27,9 +27,8 @@ Step-by-step tutorial
 
 I. installation Conda
 ------
-Install Miniconda  with this https://www.anaconda.com/download/success
+Install Miniconda [link](https://www.anaconda.com/download/success) and check the [documentation](https://www.anaconda.com/docs/main) for more informations.
 
-https://www.anaconda.com/docs/main
 
 Citation
 ------
