@@ -25,8 +25,11 @@ This GitHub project demonstrates how to train a **2D U-Net** for semantic segmen
 Step-by-step tutorial
 ------
 
+I. installation Conda
+------
+Install Miniconda  with this https://www.anaconda.com/download/success
 
-
+https://www.anaconda.com/docs/main
 
 Citation
 ------
