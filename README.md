@@ -56,12 +56,45 @@ Next, create a folder on your computer, download the following scripts, and plac
 <br /> [Extract 2D images and crop script](https://github.com/AlexHego/DL-pixel-classification/blob/main/01_extract%202D%20images%20and%20crop.ipynb)
 <br /> [Training script](https://github.com/AlexHego/DL-pixel-classification/blob/main/02_Training_sparse_label.ipynb)
 
-IV. Extracting Images from CZI Files
+IV. Preparation of data
 ------
+Place your `.czi` image files (with only one channel) in a folder named `data`.
+
+```plaintext
+parent_path/
+├── data/
+│   ├── image1.czi
+│   ├── image2.czi
+│   └── ...
+```
+Then the script will automatically create two new folders:
+
+- **extracted_tiff**: contains the extracted 2D slices (every 25 planes) from the `.czi` files.
+- **cropped_tiff**: contains the final cropped 2D images, resized to ensure the same dimensions in both **x** and **y**.
+
+```plaintext
+parent_path/
+├── data/
+│   ├── image1.czi
+│   ├── image2.czi
+│   └── ...
+├── extracted_tiff/
+│   ├── image1_z000.tif
+│   ├── image1_z025.tif
+│   └── ...
+├── cropped_tiff/
+│   ├── image1_z000.tif
+│   ├── image2_z025.tif
+│   └── ...
+```
+V. Extracting Images from CZI Files
+------
+
 Before launching Jupyter Notebook, ensure that the conda environment is activated. If it isn’t, open the Miniconda Prompt and run: <br />  `conda activate vessels_lightsheet`. <br />  Once the environment is activated, start Jupyter Notebook by typing: `jupyter notebook`.
 <br /> Then, navigate to the folder where your scripts are saved and open the notebook titled "Extract 2D images and crop". Launch the script from there.
+You will have to change the parent_path 
 
-V. Sparse annotations and training
+VI. Sparse annotations and training
 ------
 
 
