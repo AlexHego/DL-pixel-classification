@@ -28,7 +28,8 @@ Goals
 ------
 This GitHub project demonstrates how to train a **2D U-Net** for semantic segmentation using only a few annotated ROIs across slices from a large 3D light sheet images (Lightsheet Z1 from Zeiss). Labels are sparsely drawn in **Napari**, using the **napari-easy-augment-batch-dl** plugin, and augmented to increase data diversity. The trained model is then applied **slice-by-slice** across the full 3D volume using MONAI’s, and the results are visualized in Napari. While a 3D model might improve performance, this 2D approach balances accuracy and resource efficiency, making it accessible and scalable for large imaging datasets.
 
-Note: This GitHub project only works with 3D `.czi` images that contain a single channel.
+> Note:
+> This GitHub project only works with 3D `.czi` images that contain a single channel.
 
 Step-by-step tutorial
 ------
@@ -85,7 +86,7 @@ parent_path/
 │   └── ...
 ├── cropped_tiff/
 │   ├── image1_z000.tif
-│   ├── image2_z025.tif
+│   ├── image1_z025.tif
 │   └── ...
 ```
 V. Extracting Images from CZI Files
@@ -97,8 +98,22 @@ Before launching Jupyter Notebook, ensure that the conda environment is activate
 
 VI. Sparse annotations and training
 ------
-In this repository, we use **sparse labeling**, meaning not every pixel needs to be labeled. However, it's important to label some background pixels to distinguish them from unlabeled regions.
-For example, if you have two foreground classes: Use `1` for background, Use `2` for "class 1", Use `3` for "class 2". Pixels labeled as `0` are treated as **unlabeled** and will be ignored during training.
+## VI. Sparse Annotations and Training
+---
+
+Open the notebook **`02_Training_sparse_label.ipynb`** and run the script. This will launch **Napari**, where you will draw sparse annotations and begin the training process.
+
+> **Note**:  
+> This repository uses **sparse labeling**, meaning that not every pixel needs to be labeled. However, it is important to label **some background pixels** to differentiate between actual background and unlabeled regions.
+
+### Labeling Guidelines:
+
+If you have two foreground classes, use the following labels:
+- `1` → Background
+- `2` → Class 1
+- `3` → Class 2
+
+Pixels labeled as `0` are considered **unlabeled** and will be **ignored** during training.
 
 
 
