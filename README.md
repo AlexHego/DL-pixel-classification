@@ -5,8 +5,9 @@
   * [I. installation conda](#i-installation-conda)
   * [II. Create and activate a new environment](#ii-create-and-activate-a-new-environment)
   * [III. Installation dependencies](#iii-installation-dependencies)
-  * [IV. Extracting Images from CZI Files](#iv-extracting-images-from-czi-files)
-  * [V. Sparse annotations and training](#v-sparse-annotations-and-training)
+  * [IV. Organizing and preparing data](#iv-organizing-and-preparing-data)
+  * [V. Extracting Images from CZI Files](#v-extracting-images-from-czi-files)
+  * [VI. Sparse annotations and training](#vi-sparse-annotations-and-training)
 * [Results](#results)
 * [Citation](#citation)
 
@@ -56,7 +57,7 @@ Next, create a folder on your computer, download the following scripts, and plac
 <br /> [Extract 2D images and crop script](https://github.com/AlexHego/DL-pixel-classification/blob/main/01_extract%202D%20images%20and%20crop.ipynb)
 <br /> [Training script](https://github.com/AlexHego/DL-pixel-classification/blob/main/02_Training_sparse_label.ipynb)
 
-IV. Preparation of data
+IV. Organizing and preparing data
 ------
 Place your `.czi` image files (with only one channel) in a folder named `data`.
 
