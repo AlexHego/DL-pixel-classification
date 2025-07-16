@@ -53,7 +53,7 @@ III. Installation dependencies
 `pip install --upgrade git+https://github.com/True-North-Intelligent-Algorithms/napari-easy-augment-batch-dl.git`<br />
 `pip install notebook`<br />
 
-Next, create a folder on your computer, download the following scripts, and place them inside that folder. <br /> [vessels_semantic_framework.py](https://github.com/True-North-Intelligent-Algorithms/tnia-python/blob/main/notebooks/imagesc/2025_03_19_vessel_3D_lightsheet/vessels_semantic_framework.py)
+When launching Jupyter Notebook, it often opens in a default directory like `C:\Users\YourUsername`. To avoid navigation issues, it's recommended to create your project folder directly in this default location.Ten, download the following scripts, and place them inside that folder. <br /> [vessels_semantic_framework.py](https://github.com/True-North-Intelligent-Algorithms/tnia-python/blob/main/notebooks/imagesc/2025_03_19_vessel_3D_lightsheet/vessels_semantic_framework.py)
 <br /> [Extract 2D images and crop script](https://github.com/AlexHego/DL-pixel-classification/blob/main/01_extract%202D%20images%20and%20crop.ipynb)
 <br /> [Training script](https://github.com/AlexHego/DL-pixel-classification/blob/main/02_Training_sparse_label.ipynb)
 
@@ -93,10 +93,13 @@ V. Extracting Images from CZI Files
 
 Before launching Jupyter Notebook, ensure that the conda environment is activated. If it isn’t, open the Miniconda Prompt and run: <br />  `conda activate vessels_lightsheet`. <br />  Once the environment is activated, start Jupyter Notebook by typing: `jupyter notebook`.
 <br /> Then, navigate to the folder where your scripts are saved and open the notebook titled "Extract 2D images and crop". Launch the script from there.
-You will have to change the parent_path 
+<br /> Note : You will have to change the parent_path 
 
 VI. Sparse annotations and training
 ------
+In this repository, we use **sparse labeling**, meaning not every pixel needs to be labeled. However, it's important to label some background pixels to distinguish them from unlabeled regions.
+For example, if you have two foreground classes: Use `1` for background, Use `2` for "class 1", Use `3` for "class 2". Pixels labeled as `0` are treated as **unlabeled** and will be ignored during training.
+
 
 
 Results
