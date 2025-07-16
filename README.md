@@ -104,8 +104,9 @@ Open the notebook **`02_Training_sparse_label.ipynb`** and run the script. This 
 
 link to the [documentation](https://napari.org/dev/tutorials/fundamentals/viewer.html)
 <br />
-**Left Panel – Image Viewer & Layer Controls**
 
+**Left Panel – Image Viewer & Layer Controls**
+---
 Used to adjust display settings of the selected layer:
 
 - **Opacity**: Controls layer transparency.
@@ -119,6 +120,7 @@ Used to adjust display settings of the selected layer:
 - **Interpolation**: Rendering mode (`nearest` selected).
 
 **Layer List**
+---
 This section lists all visible layers in the napari viewer:
 
 - `Label box`: Manual box. Where IA check label               
@@ -129,9 +131,8 @@ This section lists all visible layers in the napari viewer:
 Note : Use the eye icon to toggle visibility for each layer.
 
 ---
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/62b3298d-7dd0-4372-9d00-bb1b8d0a58b8" align="right">
-
 ##  Right Panel – Plugin Functionalities
+<img width="250" alt="image" src="https://github.com/user-attachments/assets/62b3298d-7dd0-4372-9d00-bb1b8d0a58b8" align="right">
 
 **1. Draw Labels**
 - `Open image directory…`: Load raw image dataset.
@@ -152,7 +153,6 @@ Interface to train and use a deep learning segmentation model.
 - `Train network`: Start model training on labeled data.
 - `Predict current image`: Run inference on the visible image.
 - `Predict all images`: Apply prediction to all images in batch.
-
 
 VII. Sparse annotations and training
 ------
