@@ -103,8 +103,8 @@ Open the notebook **`02_Training_sparse_label.ipynb`** and run the script. This 
 <img width="250" alt="image" src="https://github.com/user-attachments/assets/52abe2f8-8800-4d12-b399-0c780544ef0e" align="right">
 
 link to the [documentation](https://napari.org/dev/tutorials/fundamentals/viewer.html)
-
-### Left Panel – Image Viewer & Layer Controls
+<br />
+**Left Panel – Image Viewer & Layer Controls**
 
 Used to adjust display settings of the selected layer:
 
@@ -118,7 +118,7 @@ Used to adjust display settings of the selected layer:
 - **Colormap**: Current colormap is `gray`.
 - **Interpolation**: Rendering mode (`nearest` selected).
 
-### **Layer List**
+**Layer List**
 This section lists all visible layers in the napari viewer:
 
 - `Label box`: Manual box. Where IA check label               
@@ -133,20 +133,18 @@ Note : Use the eye icon to toggle visibility for each layer.
 
 ##  Right Panel – Plugin Functionalities
 
-### **1. Draw Labels**
+**1. Draw Labels**
 - `Open image directory…`: Load raw image dataset.
 - `Save results…`: Save drawing and prediction
 
-### **2. Augment Images**
-all the augmentation can be use.
-
-**Actions**:
+**2. Augment Images**
+all the augmentation can be use and check
 - `Augment current image`: Apply only to the open image.
 - `Augment all images`: Batch augment all loaded images.
 - `Delete augmentations`: Remove generated augmented patches.
 - `Settings…`: Open advanced augmentation options.
 
-### **3. Train / Predict**
+**3. Train / Predict**
 Interface to train and use a deep learning segmentation model.
 
 - **Model type**: `Vessels Semantic Model`
