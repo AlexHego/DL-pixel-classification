@@ -100,11 +100,9 @@ VI. Sparse annotations and training
 ------
 Open the notebook **`02_Training_sparse_label.ipynb`** and run the script. This will launch **Napari**, where you will draw sparse annotations and begin the training process.
 
-**Note**:  
-This repository uses **sparse labeling**, meaning that not every pixel needs to be labeled. However, it is important to label **some background pixels** to differentiate between actual background and unlabeled regions.
 
 ### Labeling Guidelines:
-
+This method uses **sparse labeling**, meaning that not every pixel needs to be labeled. However, it is important to label **some background pixels** to differentiate between actual background and unlabeled regions.
 If you have two foreground classes, use the following labels:
 - `1` → Background
 - `2` → Class 1
