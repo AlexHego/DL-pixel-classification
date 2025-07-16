@@ -135,11 +135,8 @@ Below are some example of results.
 
 Citation
 ------
+This project builds on the work by Brian Northan [True North Intelligent Algorithms](https://github.com/True-North-Intelligent-Algorithms). I reuse and adapt parts of his code and ideas to demonstrate semantic segmentation workflows for my lightsheet imaging.
 
-This project builds on the work by Brian Northan [True North Intelligent Algorithms](https://github.com/True-North-Intelligent-Algorithms).
+If you use it successfully for your research please be so kind to cite this Github: [3D Vessel Segmentation using 2D U-Net](https://github.com/True-North-Intelligent-Algorithms/tnia-python/tree/main/notebooks/imagesc/2025_03_19_vessel_3D_lightsheet)
 
-Original example: [3D Vessel Segmentation using 2D U-Net](https://github.com/True-North-Intelligent-Algorithms/tnia-python/tree/main/notebooks/imagesc/2025_03_19_vessel_3D_lightsheet)
-
-I reuse and adapt parts of his code and ideas to demonstrate semantic segmentation workflows for my lightsheet imaging.
-All credits for the original method and implementation go to the authors.
 
