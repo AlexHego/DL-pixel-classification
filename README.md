@@ -7,7 +7,8 @@
   * [III. Installation dependencies](#iii-installation-dependencies)
   * [IV. Organizing and preparing data](#iv-organizing-and-preparing-data)
   * [V. Extracting Images from CZI Files](#v-extracting-images-from-czi-files)
-  * [VI. Sparse annotations and training](#vi-sparse-annotations-and-training)
+  * [VI. Napari Viewer and plugin interface](#vi-napari-viewer-and-plugin-interface)
+  * [VII. Sparse annotations and training](#vii-sparse-annotations-and-training)
 * [Results](#results)
 * [Citation](#citation)
 
@@ -95,7 +96,7 @@ V. Extracting Images from CZI Files
 Before launching Jupyter Notebook, ensure that the conda environment is activated. If it isn’t, open the Miniconda Prompt and run: <br />  `conda activate vessels_lightsheet`. <br />  Once the environment is activated, start Jupyter Notebook by typing: `jupyter notebook`.
 <br /> Then, navigate to the folder where your scripts are saved and open the notebook titled "Extract 2D images and crop". Launch the script from there. (**Note** : You will have to change the parent_path) 
 
-VI. Sparse annotations and training
+VI. Napari Viewer and plugin interface 
 ------
 Open the notebook **`02_Training_sparse_label.ipynb`** and run the script. This will launch **Napari**, where you will draw sparse annotations and begin the training process.
 ## Napari Viewer tutorial:
@@ -154,8 +155,9 @@ Interface to train and use a deep learning segmentation model.
 - `Predict current image`: Run inference on the visible image.
 - `Predict all images`: Apply prediction to all images in batch.
 
----
 
+VII. Sparse annotations and training
+------
 
 ### Labeling Guidelines:
 This method uses **sparse labeling**, meaning that not every pixel needs to be labeled. However, it is important to label **some background pixels** to differentiate between actual background and unlabeled regions.
