@@ -100,6 +100,7 @@ VI. Sparse annotations and training
 Open the notebook **`02_Training_sparse_label.ipynb`** and run the script. This will launch **Napari**, where you will draw sparse annotations and begin the training process.
 ## Napari Viewer tutorial:
 <img width="250" alt="image" src="https://github.com/user-attachments/assets/52abe2f8-8800-4d12-b399-0c780544ef0e" align="right">
+
 link to the [documentation](https://napari.org/dev/tutorials/fundamentals/viewer.html)
 
 ### Left Panel – Image Viewer & Layer Controls
@@ -136,7 +137,6 @@ Note : Use the eye icon to toggle visibility for each layer.
 - `Save results…`: Save drawing and prediction
 
 ### **2. Augment Images**
-**Available augmentation options**:
 all the augmentation can be use.
 
 **Actions**:
@@ -155,9 +155,6 @@ Interface to train and use a deep learning segmentation model.
 - `Predict all images`: Apply prediction to all images in batch.
 
 ---
-
-
-
 
 
 ### Labeling Guidelines:
