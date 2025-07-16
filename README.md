@@ -116,6 +116,14 @@ Pixels labeled as `0` are considered **unlabeled** and will be **ignored** durin
 
 Results
 ------
+
+Below are some example of results. 
+
+**Color legend:**
+- 🟢 **Green** – Raw data  
+- 🔴 **Red** – Model prediction  
+- 🟡 **Yellow** – Overlay (Raw + Prediction)
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/fc3f62c7-0fcc-4c1b-bed9-8699b274eb02" height="350" />
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
