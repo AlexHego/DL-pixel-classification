@@ -16,7 +16,10 @@ Pixel Classification
 ------
 Pixel classification in biological images involves assigning a class (e.g. vessel, nucleus, background) to each pixel based on its local appearance. This typically starts with manual annotation, where the user draws or colors selected regions (sparse labeling) to provide examples of each class. Tools like **Ilastik** or **Trainable Weka Segmentation** in Fiji, **QuPath** allow biologists to perform such classification using **Random Forest** classifiers. 
 
-![pixelclassifier](https://github.com/user-attachments/assets/f5daa20b-5f1e-4b6c-ab6a-cf5548d1fd7a)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f5daa20b-5f1e-4b6c-ab6a-cf5548d1fd7a">
+</p>
+
 
 However, Random Forests have limitations, this motivates the shift toward **deep learning**, like **U-Net**.
 
@@ -61,14 +64,15 @@ Before launching Jupyter Notebook, ensure that the conda environment is activate
 V. Sparse annotations and training
 ------
 
+
 Results
 ------
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fc3f62c7-0fcc-4c1b-bed9-8699b274eb02" height="350" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://github.com/user-attachments/assets/d6db9482-c442-49fd-88e5-60418ad2de43" height="350" />
+</p>
 
-![2d slice](https://github.com/user-attachments/assets/fc3f62c7-0fcc-4c1b-bed9-8699b274eb02)
-
-
-
-https://github.com/user-attachments/assets/ab7476a2-06ab-4925-948e-ec738b5410e3
 
 
 
