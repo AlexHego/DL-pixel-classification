@@ -60,7 +60,7 @@ When launching Jupyter Notebook, it often opens in a default directory like `C:\
 
 IV. Organizing and preparing data
 ------
-Place your `.czi` image files (with only one channel) in a folder named `data`.
+Place your `.czi` image files (with only one channel) in a folder named `data`. Please follow this structure.
 
 ```plaintext
 parent_path/
@@ -98,7 +98,6 @@ Before launching Jupyter Notebook, ensure that the conda environment is activate
 VI. Sparse annotations and training
 ------
 Open the notebook **`02_Training_sparse_label.ipynb`** and run the script. This will launch **Napari**, where you will draw sparse annotations and begin the training process.
-
 
 ### Labeling Guidelines:
 This method uses **sparse labeling**, meaning that not every pixel needs to be labeled. However, it is important to label **some background pixels** to differentiate between actual background and unlabeled regions.
