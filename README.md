@@ -99,16 +99,11 @@ VI. Sparse annotations and training
 ------
 Open the notebook **`02_Training_sparse_label.ipynb`** and run the script. This will launch **Napari**, where you will draw sparse annotations and begin the training process.
 ## Napari Viewer tutorial:
+<img width="250" alt="image" src="https://github.com/user-attachments/assets/52abe2f8-8800-4d12-b399-0c780544ef0e" align="right">
 link to the [documentation](https://napari.org/dev/tutorials/fundamentals/viewer.html)
 
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/ff71fe74-0ade-4e82-9ae7-0e3cce9ede60">
-</p>
-
-
 ### Left Panel – Image Viewer & Layer Controls
-**Layer Controls**
+
 Used to adjust display settings of the selected layer:
 
 - **Opacity**: Controls layer transparency.
@@ -121,49 +116,28 @@ Used to adjust display settings of the selected layer:
 - **Colormap**: Current colormap is `gray`.
 - **Interpolation**: Rendering mode (`nearest` selected).
 
----
-
 ### **Layer List**
 This section lists all visible layers in the napari viewer:
 
-| Layer Name              | Description                                      |
-|-------------------------|--------------------------------------------------|
-| **Label box**            | Manual box. Where IA check label                |
-| **predictions_0**        | Model-predicted semantic segmentation.           |
-| **labels_0**             | Manual ground truth labels.                      |
-| **images**               | Raw input image currently viewed.                |
+- `Label box`: Manual box. Where IA check label               
+- `predictions_0`: Model-predicted semantic segmentation.    
+- `labels_0`: Manual ground truth labels.                  
+- `images`: Raw input image currently viewed.              
 
-Use the eye icon to toggle visibility for each layer.
+Note : Use the eye icon to toggle visibility for each layer.
 
 ---
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/62b3298d-7dd0-4372-9d00-bb1b8d0a58b8" align="right">
 
-## 🟣 Right Panel – Plugin Functionalities
+##  Right Panel – Plugin Functionalities
 
 ### **1. Draw Labels**
-Used to manage image input and label saving:
-
-- **Open image directory…**: Load raw image dataset.
-- **Save results…**: Export label or prediction layers.
-- **Currently loaded file**: `M21E4_z100.tif`
-
----
+- `Open image directory…`: Load raw image dataset.
+- `Save results…`: Save drawing and prediction
 
 ### **2. Augment Images**
-Applies data augmentation for training deep learning models.
-
 **Available augmentation options**:
-- ✅ Horizontal Flip
-- ✅ Vertical Flip
-- ✅ Random Rotate
-- ✅ Random Resize
-- ✅ Random Brightness/Contrast
-- ✅ Random Gamma
-- ✅ Random Adjust Color
-- ✅ Elastic Deformation
-
-**Patch configuration**:
-- `Patches per ROI`: `100`
-- `Patch size`: `256 × 256`
+all the augmentation can be use.
 
 **Actions**:
 - `Augment current image`: Apply only to the open image.
@@ -171,22 +145,14 @@ Applies data augmentation for training deep learning models.
 - `Delete augmentations`: Remove generated augmented patches.
 - `Settings…`: Open advanced augmentation options.
 
----
-
 ### **3. Train / Predict**
 Interface to train and use a deep learning segmentation model.
 
 - **Model type**: `Vessels Semantic Model`
-- ✅ `show_background_class`: Include background class.
-- **Tile size**: `1024`
-- **Model status**: `notset` (no model loaded)
-
-**Actions**:
 - `Load`: Load a pre-trained model.
 - `Train network`: Start model training on labeled data.
 - `Predict current image`: Run inference on the visible image.
 - `Predict all images`: Apply prediction to all images in batch.
-- `Save results…`: Export prediction output.
 
 ---
 
