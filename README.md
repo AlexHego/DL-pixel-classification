@@ -94,11 +94,19 @@ V. Extracting Images from CZI Files
 ------
 
 Before launching Jupyter Notebook, ensure that the conda environment is activated. If it isn’t, open the Miniconda Prompt and run: <br />  `conda activate vessels_lightsheet`. <br />  Once the environment is activated, start Jupyter Notebook by typing: `jupyter notebook`.
-<br /> Then, navigate to the folder where your scripts are saved and open the notebook titled "Extract 2D images and crop". Launch the script from there. (**Note** : You will have to change the parent_path) 
+<br /> Then, navigate to the folder where your scripts are saved and open the notebook titled "Extract 2D images and crop". This notebook crops the images to ensure they all have the same dimensions along the x and y axes. <br /> **Note** : You will have to change the parent_path
 
 VI. Napari Viewer and plugin interface 
 ------
 Open the notebook **`02_Training_sparse_label.ipynb`** and run the script. This will launch **Napari**, where you will draw sparse annotations and begin the training process.
+
+### Important: "Number of Classes" Dialog
+
+When prompted with the **"Number of classes"** dialog box, **leave it set to `1`**, even if you are using multiple pixel classes (e.g., background, class 1, class 2).
+
+<img width="347" height="152" alt="image" src="https://github.com/user-attachments/assets/42a27380-ba09-42d1-b291-8ebcda5748da" />
+
+
 ## Napari Viewer tutorial:
 <img width="250" alt="image" src="https://github.com/user-attachments/assets/52abe2f8-8800-4d12-b399-0c780544ef0e" align="right">
 
@@ -157,14 +165,29 @@ Interface to train and use a deep learning segmentation model.
 VII. Sparse annotations and training
 ------
 
-### Labeling Guidelines:
-This method uses **sparse labeling**, meaning that not every pixel needs to be labeled. However, it is important to label **some background pixels** to differentiate between actual background and unlabeled regions.
-If you have two foreground classes, use the following labels:
-- `1` → Background
-- `2` → Class 1
-- `3` → Class 2
+### To begin annotating, follow these steps:
 
-Pixels labeled as `0` are considered **unlabeled** and will be **ignored** during training.
+1. **Select the `Label box` layer** in the Napari viewer.  **Important**: Make sure the label box you draw is **larger than the patch size** (which is set to `256` by default).  
+2. Use the shape tool (rectangle icon) to **draw a box** in the image. This box defines the region where the AI will look for your annotations.
+3. After drawing the box, switch to the `labels_0` layer to **draw sparse annotations** inside the selected area.
+
+This method uses **sparse labeling**, meaning you do **not** need to label every pixel. However, you **must label some background pixels** to help the model differentiate between background and unlabeled areas.
+
+### Labeling Guide
+
+If you're working with two foreground classes, use the following labels:
+
+- `1` → Background  
+- `2` → Class 1  
+- `3` → Class 2  
+
+Any pixels labeled as `0` are treated as **unlabeled** and will be **ignored during training**.
+
+###  Example 
+
+
+
+
 
 
 
