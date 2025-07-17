@@ -9,6 +9,8 @@
   * [V. Extracting Images from CZI Files](#v-extracting-images-from-czi-files)
   * [VI. Napari Viewer and plugin interface](#vi-napari-viewer-and-plugin-interface)
   * [VII. Sparse annotations and training](#vii-sparse-annotations-and-training)
+  * [VIII. Human in the loop like method](#viii-human-in-the-loop-like-method)
+* [Tips and Tricks](#tips-and-tricks)
 * [Results](#results)
 * [Citation](#citation)
 
@@ -164,8 +166,24 @@ Interface to train and use a deep learning segmentation model.
 
 VII. Sparse annotations and training
 ------
+##  Useful Napari Keyboard Shortcuts
 
-### To begin annotating, follow these steps:
+Here are some helpful keyboard and mouse shortcuts to make navigating and annotating in Napari easier:
+
+| Action                                      | Shortcut                           |
+|--------------------------------------------|------------------------------------|
+|  Move the image                          | Left-click + drag                  |
+| Zoom in/out                              | Mouse scroll wheel                 |
+|  Increase brush size                      | `Alt` + drag right                 |
+|  Decrease brush size                      | `Alt` + drag left                  |
+|  Navigate between layers                  | `Up` / `Down` arrows or `Ctrl` + `←`/`→` |
+|  Show/hide a layer                        | Click the eye icon next to the layer |
+|  Delete a shape (e.g., rectangle)         | Select shape + `Delete` key        |
+| Reset the view                           | Press `R`                          |
+| Activate brush tool                      | Press `B`                          |
+| Activate fill tool (paint bucket)        | Press `F`                          |
+
+## To begin annotating, follow these steps:
 
 1. **Select the `Label box` layer** in the Napari viewer.  **Important**: Make sure the label box you draw is **larger than the patch size** (which is set to `256` by default).  
 2. Use the shape tool (rectangle icon) to **draw a box** in the image. This box defines the region where the AI will look for your annotations.
@@ -183,12 +201,91 @@ If you're working with two foreground classes, use the following labels:
 
 Any pixels labeled as `0` are treated as **unlabeled** and will be **ignored during training**.
 
-###  Example 
+##  Training setup
+<img width="250" alt="image" src="https://github.com/user-attachments/assets/940d14f4-2de5-43cc-86ad-0f31244ffa1e" align="right">
+
+- **`depth`**  
+  Number of layers in the encoder. Higher values increase model capacity to see larger area but also training time.  
+ 
+- **`features_level_1`**  
+  Number of feature channels in the first layer. Each subsequent layer doubles this value.  
+  *Example:* If set to `32`, the encoder feature channels will be: `32 → 64 → 128 → 256 → 512`.
+
+- **`weight_c1`, `weight_c2`, `weight_c3`**  
+  Class weights used in the loss function for class balancing:
+  - `weight_c1` → Background  
+  - `weight_c2` → Class 1  
+  - `weight_c3` → Class 2 (e.g., vessels)  
+  *Tip:* Increase the weight for the **vessel class** to emphasize learning on vessels.
+
+- **`num_epochs`**  
+  Total number of training epochs. Higher values allow longer learning but take more time.
+
+- **`learning_rate`**  
+  Learning rate for the optimizer. A lower value like `0.0001` is usually safer and more stable.
+
+- **`dropout`**  
+  Dropout rate for regularization. Helps prevent overfitting. Recommended values are between `0.1` and `0.5`.
+
+- **`model_name`**  
+  The filename for saving the trained model (e.g., `vessel_segmentation.pth`).
 
 
+##  Annotation, augmentation and training example
+
+![part1](https://github.com/user-attachments/assets/0f23247f-d3be-4243-92a9-76d0909654c3)
 
 
+VIII. Human in the loop like method
+------
+## 🔄 Human-in-the-Loop Training Loop
 
+Once you have created your initial sparse annotations and trained the first version of the model, you can start a **human-in-the-loop method** to iteratively improve results with minimal effort.
+
+### Loop Steps 
+
+1. **Predict on a New Image**  
+   Open a new image in Napari, click **"Predict current image"** using your trained model and draw a `Label box`.
+
+2. **Convert Prediction to Labels**  
+   After the label box, Napari will prompt: <br />
+   <img width="412" height="151" alt="image" src="https://github.com/user-attachments/assets/ac769147-d219-4bb9-9f53-ed11310aa6f7" /> <br />
+   Click **Yes**. This will create editable labels based on the model's prediction.
+
+4. **Correct the Prediction**  
+   - Use the `labels_0` layer to manually correct any mistakes (e.g., missing vessels, false positives).
+
+5. **Augment and Retrain**  
+   - Apply augmentations again and train the model to incorporate the newly corrected data.
+
+6. **Repeat**  
+   Continue this loop with additional images:
+   - Predict → Convert → Correct → Retrain  
+   to build a more accurate and generalizable model over time.
+
+This approach drastically reduces manual annotation time while steadily improving model performance.  
+
+Tips and Tricks
+------
+Here are some optional strategies and considerations to help you get the most out of your training process:
+
+### 1. Downsample the Image (Optional)
+
+Downsampling your input images can significantly increase training speed and effectively expand the model’s **real-world receptive field**.  
+
+- For example, if your network has a receptive field of `50×50` pixels, downsampling the image will make that field cover a larger area of the original image.
+- This can help the model capture **large-scale structures** like major vessels or tissue architecture more effectively **BUT** you may lose finer details such as **small vessels**.
+
+### 2.  Class Weights – Use with Care
+
+During early training iterations with **sparse annotations**, using **class weights** is helpful to:
+- Emphasize underrepresented or important classes (e.g., vessels).
+- Help the model focus on sparse labels that might otherwise be overwhelmed by background.
+
+However, after a few training cycles — once you’ve annotated a **larger amount of data** — continuing to use high class weights can become **counterproductive**:
+
+- The model may **overfit** to those classes.
+- It can start introducing **bias**
 
 
 Results
