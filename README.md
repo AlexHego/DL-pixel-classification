@@ -10,6 +10,7 @@
   * [VI. Napari Viewer and plugin interface](#vi-napari-viewer-and-plugin-interface)
   * [VII. Sparse annotations and training](#vii-sparse-annotations-and-training)
   * [VIII. Human in the loop like method](#viii-human-in-the-loop-like-method)
+  * 
 * [Tips and Tricks](#tips-and-tricks)
 * [Results](#results)
 * [Citation](#citation)
@@ -264,6 +265,22 @@ Once you have created your initial sparse annotations and trained the first vers
    to build a more accurate and generalizable model over time.
 
 This approach drastically reduces manual annotation time while steadily improving model performance.  
+
+
+IX. Predict entire 3D dataset
+------
+The prediction step for an entire 3D dataset is **performed outside of Napari**, so you can safely close the application once annotations and training are complete.
+
+To run inference, you can choose between two scripts depending on the output you want:
+
+- **Script 1** – Predict **class labels** (segmentation output):  
+  Generates a 3D mask where each voxel is assigned to the most probable class.
+
+- **Script 2** – Predict **class probabilities**:  
+  Outputs a probability map for each class, useful if you need confidence values or plan further post-processing.
+
+**Note**: Use class label prediction for typical segmentation tasks, and probability maps if you want more flexibility or uncertainty-aware post-processing.
+
 
 Tips and Tricks
 ------
