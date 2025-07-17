@@ -61,6 +61,8 @@ III. Installation dependencies
 When launching Jupyter Notebook, it often opens in a default directory like `C:\Users\YourUsername`. To avoid navigation issues, it's recommended to create your project folder directly in this default location.Ten, download the following scripts, and place them inside that folder. <br /> [vessels_semantic_framework.py](https://github.com/True-North-Intelligent-Algorithms/tnia-python/blob/main/notebooks/imagesc/2025_03_19_vessel_3D_lightsheet/vessels_semantic_framework.py)
 <br /> [Extract 2D images and crop script](https://github.com/AlexHego/DL-pixel-classification/blob/main/01_extract%202D%20images%20and%20crop.ipynb)
 <br /> [Training script](https://github.com/AlexHego/DL-pixel-classification/blob/main/02_Training_sparse_label.ipynb)
+<br /> [class prediction script for 3D data](https://github.com/AlexHego/DL-pixel-classification/blob/main/03_segment_full_volume.ipynb)
+<br /> [probabilities script for 3D data](https://github.com/AlexHego/DL-pixel-classification/blob/main/03b_segment_multi_class_probability.ipynb)
 
 IV. Organizing and preparing data
 ------
@@ -273,10 +275,10 @@ The prediction step for an entire 3D dataset is **performed outside of Napari**,
 
 To run inference, you can choose between two scripts depending on the output you want:
 
-- **Script 1** – Predict **class labels** (segmentation output):  
+- **03_segment_full_volume.ipynb** – Predict **class labels** (segmentation output):  
   Generates a 3D mask where each voxel is assigned to the most probable class.
 
-- **Script 2** – Predict **class probabilities**:  
+- **03b_segment_multi_class_probability** – Predict **class probabilities**:  
   Outputs a probability map for each class, useful if you need confidence values or plan further post-processing.
 
 **Note**: Use class label prediction for typical segmentation tasks, and probability maps if you want more flexibility or uncertainty-aware post-processing.
