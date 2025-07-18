@@ -10,7 +10,7 @@
   * [VI. Napari Viewer and plugin interface](#vi-napari-viewer-and-plugin-interface)
   * [VII. Sparse annotations and training](#vii-sparse-annotations-and-training)
   * [VIII. Human in the loop like method](#viii-human-in-the-loop-like-method)
-  * 
+  * [IX. Predict entire 3D dataset](#ix-predict-entire-3d-dataset)
 * [Tips and Tricks](#tips-and-tricks)
 * [Results](#results)
 * [Citation](#citation)
