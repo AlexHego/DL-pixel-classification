@@ -17,12 +17,10 @@
 
 Recent Updates
 (August 2025)
-- Improved memory efficiency by writing predicted slices incrementally — no need to load full volumes in RAM.
-- OME-TIFF output now structured as (C, Z, Y, X) — fully compatible with ImageJ, Napari, and other bioimage tools.
-- One unified script supports both classification and probability
 - Script now detects and prints the number of classes the model was trained to predict.
-
-
+- You can now select the number of classes to include in the final output file and fully compatible with ImageJ, Napari, and other bioimage tools.
+- mproved memory efficiency by writing predicted slices incrementally — no need to load full volumes in RAM.
+- One unified script supports both classification and probability
 
 Pixel Classification
 ------
