@@ -63,7 +63,9 @@ III. Installation dependencies
 `pip install --upgrade git+https://github.com/Project-MONAI/MONAI `<br />
 `pip install --upgrade git+https://github.com/True-North-Intelligent-Algorithms/tnia-python.git`<br />
 `pip install --upgrade git+https://github.com/True-North-Intelligent-Algorithms/napari-easy-augment-batch-dl.git`<br />
+`pip install "numpy<2.0"`<br />
 `pip install notebook`<br />
+
 
 When launching Jupyter Notebook, it often opens in a default directory like `C:\Users\YourUsername`. To avoid navigation issues, it's recommended to create your project folder directly in this default location.Ten, download the following scripts, and place them inside that folder. <br /> [vessels_semantic_framework.py](https://github.com/True-North-Intelligent-Algorithms/tnia-python/blob/main/notebooks/imagesc/2025_03_19_vessel_3D_lightsheet/vessels_semantic_framework.py)
 <br /> [Extract 2D images and crop script](https://github.com/AlexHego/DL-pixel-classification/blob/main/01_extract%202D%20images%20and%20crop.ipynb)
