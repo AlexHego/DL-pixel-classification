@@ -37,8 +37,6 @@ Goals
 ------
 This GitHub project demonstrates how to train a **2D U-Net** for semantic segmentation using only a few annotated ROIs across slices from a large 3D light sheet images (Lightsheet Z1 from Zeiss). Labels are sparsely drawn in **Napari**, using the **napari-easy-augment-batch-dl** plugin, and augmented to increase data diversity. The trained model is then applied **slice-by-slice** across the full 3D volume using MONAI’s, and the results are visualized in Napari. While a 3D model might improve performance, this 2D approach balances accuracy and resource efficiency, making it accessible and scalable for large imaging datasets.
 
-**Note:**
-This GitHub project only works with 3D `.czi` images that contain a single channel.
 
 Step-by-step tutorial
 ------
